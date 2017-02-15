@@ -1,0 +1,16 @@
+---
+  version: 1
+  schedule:
+    type: "simple"
+    interval: "1s"
+  max-failures: 10
+  workflow:
+    collect:
+      metrics:
+        /intel/pciessd/nvme0n1/Temperature: {}
+        /intel/pciessd/nvme0n1/PowerCycles: {}
+        /intel/pciessd/nvme0n1/PowerOnHours: {}
+      publish:
+        - plugin_name: "file"
+          config:
+            file: "/tmp/pciessd_metrics.log"

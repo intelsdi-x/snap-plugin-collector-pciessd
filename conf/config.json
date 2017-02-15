@@ -1,0 +1,670 @@
+{
+	"LogPage" : {
+		"SmartAttributes" : {
+			"Identifier" : 2,
+			"Metrics" : [
+				{
+					"Name" : "CriticalWarning",
+					"Length" : 1,
+					"Bit" : {
+						"Set" : [
+							"Avaiable Spare is below Threshold;",
+							"Temperature has exceeded Threshold;",
+							"Reliability is degraded due to excessive media or internal errors;",
+							"Media is placed in Read-Only Mode;",
+							"Volatile Memory Backup System has failed;"
+						]
+					}
+				},
+				{
+					"Name" : "Temperature",
+					"Length" : 2,
+					"Uint16" : {},
+					"Unit" : "Kelvin"
+				},
+				{
+					"Name" : "AvailableSpare",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Name" : "AvailableSpareThreshold",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Name" : "PercentageUsedEstimate",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 26
+				},
+				{
+					"Name" : "DataUnitsRead",
+					"Length" : 16,
+					"Uint128" : {
+						"Scale" : 512000
+					},
+					"Unit" : "Byte"
+				},
+				{
+					"Name" : "DataUnitsWrite",
+					"Length" : 16,
+					"Uint128" : {
+						"Scale" : 512000
+					},
+					"Unit" : "Byte"
+				},
+				{
+					"Name" : "HostReadCommands",
+					"Length" : 16,
+					"Uint128" : {}
+				},
+				{
+					"Name" : "HostWriteCommands",
+					"Length" : 16,
+					"Uint128" : {}
+				},
+				{
+					"Name" : "ControllerBusyTime",
+					"Length" : 16,
+					"Uint128" : {},
+					"Unit" : "Minute"
+				},
+				{
+					"Name" : "PowerCycles",
+					"Length" : 16,
+					"Uint128" : {}
+				},
+				{
+					"Name" : "PowerOnHours",
+					"Length" : 16,
+					"Uint128" : {}
+				},
+				{
+					"Name" : "UnsafeShutdowns",
+					"Length" : 16,
+					"Uint128" : {}
+				},
+				{
+					"Name" : "MediaErrors",
+					"Length" : 16,
+					"Uint128" : {}
+				},
+				{
+					"Name" : "NumberOfErrorInformationLogEntries",
+					"Length" : 16,
+					"Uint128" : {}
+				}
+			]
+		},
+		"MarketingName" : {
+			"Identifier" : 221,
+			"Metrics" : [
+				{
+					"Name" : "MarketingName",
+					"Length" : 31,
+					"String" : {}
+				}
+			]
+		},
+		"AdditionalSmartAttributes": {
+			"Identifier" : 202,
+			"Metrics" : [
+				{
+					"Name" : "ProgramFailCount/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "ProgramFailCount/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "ProgramFailCount/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "EraseFailCount/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "EraseFailCount/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "EraseFailCount/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "WearLevelingCount/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "WearLevelingCount/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "WearLevelingCount/Min",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Name" : "WearLevelingCount/Max",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Name" : "WearLevelingCount/Avg",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "EndToEndErrorDetectionCount/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "EndToEndErrorDetectionCount/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "EndToEndErrorDetectionCount/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "CRCErrorCount/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "CRCErrorCount/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "CRCErrorCount/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "TimedWorkloadMediaWear/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "TimedWorkloadMediaWear/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "TimedWorkloadMediaWear/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "TimedWorkloadHostReadPercentage/SmartID",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "TimedWorkloadHostReadPercentage/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "TimedWorkloadHostReadPercentage/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "TimedWorkloadTimer/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "TimedWorkloadTimer/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "TimedWorkloadTimer/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "ThermalThrottleStatus/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "ThermalThrottleStatus/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "ThermalThrottleStatus/Percentage",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Name" : "ThermalThrottleStatus/EventCount",
+					"Length" : 4,
+					"Uint32" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "RetryBufferOverflowCounter/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "RetryBufferOverflowCounter/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "RetryBufferOverflowCounter/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "PLLLockLossCount/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "PLLLockLossCount/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "PLLLockLossCount/CurrentRawValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "NANDBytesWritten/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "NANDBytesWritten/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "NANDBytesWritten/CurrentValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "HostBytesWritten/SmartID",
+					"Length" : 1,
+					"Uint8" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 2
+				},
+				{
+					"Name" : "HostBytesWritten/NormalizedValue",
+					"Length" : 1,
+					"Uint8" : {},
+					"Unit" : "Percentage"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				},
+				{
+					"Name" : "HostBytesWritten/CurrentValue",
+					"Length" : 6,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 1
+				}
+			]
+		},
+		"TemperatureStatistics" : {
+			"Identifier" : 197,
+			"Metrics" : [
+				{
+					"Name" : "CurrentTemperature",
+					"Length" : 8,
+					"Uint64" : {},
+					"Unit" : "Celsius"
+				},
+				{
+					"Name" : "OvertempShutdownFlagForLastCriticalComponentTemperature",
+					"Length" : 8,
+					"Uint64" : {}
+				},
+				{
+					"Name" : "OvertempShutdownFlagForLifeCriticalComponentTemperature",
+					"Length" : 8,
+					"Uint64" : {}
+				},
+				{
+					"Name" : "HighestTemperature",
+					"Length" : 8,
+					"Uint64" : {},
+					"Unit" : "Celsius"
+				},
+				{
+					"Name" : "LowestTemperature",
+					"Length" : 8,
+					"Uint64" : {},
+					"Unit" : "Celsius"
+				},
+				{
+					"Ignore" : true,
+					"Length" : 40
+				},
+				{
+					"Name" : "SpecifiedMaximumOperatingTemperature",
+					"Length" : 8,
+					"Uint64" : {}
+				},
+				{
+					"Ignore" : true,
+					"Length" : 8
+				},
+				{
+					"Name" : "SpecifiedMinimumOperatingTemperature",
+					"Length" : 8,
+					"Uint64" : {}
+				},
+				{
+					"Name" : "EstimatedOffset",
+					"Length" : 8,
+					"Int64" : {}
+				}
+			]
+		},
+		"ReadCommandLatency" : {
+			"Identifier" : 193,
+			"Metrics" : [
+				{
+					"Name" : "ReadCommandLatency/MajorRevision",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Name" : "ReadCommandLatency/MinorRevision",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Name" : "ReadCommandLatency",
+					"Length" : 4,
+					"Uint32" : {},
+					"Repeat" : {
+						"NameFormat" : "%dus",
+						"Step" : 32,
+						"Start" : 0,
+						"Total" : 32
+					}
+				},
+				{
+					"Name" : "ReadCommandLatency",
+					"Length" : 4,
+					"Uint32" : {},
+					"Repeat" : {
+						"NameFormat" : "%dms",
+						"Step" : 1,
+						"Start" : 1,
+						"Total" : 31
+					}
+				},
+				{
+					"Name" : "ReadCommandLatency",
+					"Length" : 4,
+					"Uint32" : {},
+					"Repeat" : {
+						"NameFormat" : "%dms",
+						"Step" : 32,
+						"Start" : 32,
+						"Total" : 31
+					}
+				}
+			]
+		},
+		"WriteCommandLatency" : {
+			"Identifier" : 194,
+			"Metrics" : [
+				{
+					"Name" : "WriteCommandLatency/MajorRevision",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Name" : "WriteCommandLatency/MinorRevision",
+					"Length" : 2,
+					"Uint16" : {}
+				},
+				{
+					"Name" : "WriteCommandLatency",
+					"Length" : 4,
+					"Uint32" : {},
+					"Repeat" : {
+						"NameFormat" : "%dus",
+						"Step" : 32,
+						"Start" : 0,
+						"Total" : 32
+					}
+				},
+				{
+					"Name" : "WriteCommandLatency",
+					"Length" : 4,
+					"Uint32" : {},
+					"Repeat" : {
+						"NameFormat" : "%dms",
+						"Step" : 1,
+						"Start" : 1,
+						"Total" : 31
+					}
+				},
+				{
+					"Name" : "WriteCommandLatency",
+					"Length" : 4,
+					"Uint32" : {},
+					"Repeat" : {
+						"NameFormat" : "%dms",
+						"Step" : 32,
+						"Start" : 32,
+						"Total" : 31
+					}
+				}
+			]
+		}
+	},
+	"Models" : [
+		{
+			"IdentifyLog" : "MarketingName",
+			"Name" : "P3700",
+			"GetLogPage" : [
+				"SmartAttributes", 
+				"AdditionalSmartAttributes",
+				"MarketingName",
+				"TemperatureStatistics",
+				"ReadCommandLatency",
+				"WriteCommandLatency"
+			]
+		}	
+	]
+}

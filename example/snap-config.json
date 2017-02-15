@@ -1,0 +1,16 @@
+{
+	"log_level" : 1,
+	"log_path" : "/var/log/snap/",
+	"control" : {
+		"plugin_trust_level" : 0,
+		"plugins":  {
+			"collector" : {
+				"pciessd" : {
+					"all" : {
+						"conf" : "../conf/config.json"
+					}
+				}
+			}
+		}
+	}
+}
