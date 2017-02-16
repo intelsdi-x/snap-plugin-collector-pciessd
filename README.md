@@ -7,9 +7,8 @@ Currently it works only on Intel(R) Solid State State Drive DC P3700 Series. To 
 	* [Installation](#installation)
 	* [Configuration and Usage](#configuration-and-usage)
 2. [Documentataion](#documentation)
-3. [Community Support](#community-support)
-4. [License](#license)
-5. [Acknowledgements](#acknowledgements)
+3. [License](#license)
+4. [Acknowledgements](#acknowledgements)
 
 ## Getting Started
 
@@ -36,12 +35,12 @@ This builds the plugin in `./build/`
 `./conf/config.json` describes how to parse the NVMe result and generate the metrics.
 
 For snap configuration
-	* conf - defines the path of configuration file.
+* conf - defines the path of configuration file.
 See more details in `example/snap-config.json` and `./conf/config.json`
 
 ## Documentation 
 
-Metrics are all defined in `./conf/config.json`. Metrics below is for the default configuration.
+Metrics are all defined in `./conf/config.json`. Metrics listed below are for the default configuration.
 
 ```
 /intel/pciessd/drive-name/CriticalWarning
@@ -312,4 +311,4 @@ Metrics are all defined in `./conf/config.json`. Metrics below is for the defaul
 [Snap](http://github.com/intelsdi-x/snap), along with this plugin, is an Open Source software released under the Apache 2.0 [License](LICENSE)
 
 ## Acknowledgements
-* Author [Wang Jialei A](https://github.com/WangJialei-A)
+* Author: [Wang Jialei A](https://github.com/WangJialei-A)
