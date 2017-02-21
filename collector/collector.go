@@ -144,7 +144,7 @@ func (this *PCIeSSD) GetDevices() ([]string, error) {
 		if err != nil || n != 4 {
 			continue
 		}
-		if major == 259 {
+		if major == 259 && minor % 16 == 0 {
 			ret = append(ret, name)
 		}
 	}
