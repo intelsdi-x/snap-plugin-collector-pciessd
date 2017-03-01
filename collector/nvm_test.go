@@ -1,8 +1,10 @@
+// +build large
+
 package collector
 
 import (
-	"testing"
 	"os"
+	"testing"
 )
 
 func TestGetLogPage(t *testing.T) {
@@ -12,7 +14,7 @@ func TestGetLogPage(t *testing.T) {
 	}
 
 	lids := []uint8{2, 221, 202, 197, 193, 194}
-	for i := 0;i < len(lids);i ++ {
+	for i := 0; i < len(lids); i++ {
 		buf := make([]byte, 256)
 		err = GetLogPage(f.Fd(), lids[i], buf)
 		if err != nil {
