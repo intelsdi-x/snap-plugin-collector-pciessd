@@ -1,35 +1,14 @@
-:global:
-  build:
-    matrix:
-      - GOOS: linux
-        GOARCH: amd64
-      - GOOS: darwin
-        GOARCH: amd64
-  maintainer: core
 .travis.yml:
-  sudo: true
-  services:
-    - docker
   env:
     global:
       - ORG_PATH=/home/travis/gopath/src/github.com/intelsdi-x
       - SNAP_PLUGIN_SOURCE=/home/travis/gopath/src/github.com/${TRAVIS_REPO_SLUG}
+      - GLIDE_HOME="${HOME}/.glide"
     matrix:
       - TEST_TYPE=small
-      - TEST_TYPE=medium
-      - SNAP_VERSION: latest
-        TEST_TYPE: large
-      - SNAP_VERSION: latest_build
-        TEST_TYPE: large
-  matrix:
-    exclude:
-      - go: 1.6.x
-        env: SNAP_VERSION=latest TEST_TYPE=large
-      - go: 1.6.x
-        env: SNAP_VERSION=latest_build TEST_TYPE=large
   deploy:
     access_key_id: AKIAINMB43VSSPFZISAA
     secret_access_key:
-      secure: K2AnEm2FcP0wEQ1rWJzkASpLUBHeICjwFxYGiq44HB3KTj/4G4MYtSIxYjWdG9C81sfCbC+wMHyWla8rRrVOxeMTBeJpoBNoX8wo3gAwetfA3DkVyN51xTsiHUa7yhjDjxD9scrGsJlwO+d9zyk63RU9rQGKxoDudlBvtfEat+Uke6Oq0rcUSXzqBF9ejLwscLYlFTmz+NfeACcvVqsB1Ht5RpR/VuqFXwpfmj/G+3YBx6RYQQempltL+JZUzT8UhHpQJf2sp148i/T/jqM4Agwmu398G61Jeu3t7ESDnvA37t+1hmmDq88AOveEp3pbOThCS/4ycbL2DRRns6aQnrZgBbVvHxY/ZdSWsyjVbqBQJCguo4BF0hyDdnfSi8mbkwcRf9XSSftwHxW0NyWPYhg/GASf2lKsrGG7UGZoUmMgb/jJ03sEdwjqzB+ICDa+Txhhmikxgwqfj0hyDXbHYmPNSwQ5TYI35upiEj8X8fERceFYgKGUCmphqsKtZq4iPcdKqJ4xBtHmKLutk2YqkDuKPUrx96/3kSTTF8OfaSU3+bipFcOyo48TLc/QEaag4MRoPU+L47xRwlSrZFFFrioVmFjxgY8yOoN0yRuc9XccMmmEzApa621OlzMjyduMw8UG5/+tXcmOOlcM1n2p+RqtJ/Vi0/9oyG7AxeP4mj8=
+      secure: NO/T51J8AC8jNfFN7xSEx/oOEp+Ntvk/7WICKwhRA6fkDf9PeCaBOT3lGzgvHZCyy9PYGbfxe42X12yUuNoAYGs631vt0Pfi834pnwQtFd7WlnCanl3yADBaIVEKpfxQbINb1NYxWviqK0Xu7c/vGIkeZW36aUV3EF+Zkuskp7/BnvDsic1pumqTNiwSWfqT++DlcWo05kx6YH8wsF4+el+6YERdUZQ7Mu0j2D3jlZjEHeolLKHk7fPOP1Atr1slasqqAGSE10sFTUQrM/a0R1FiTDvxRt8DKP3d/CMSD4sbIPHAC6wjtzNvQiA1JRAQVqDU4suwYiyPJMQpIRXDRHasxTdQxGH+1Dm5dBIJQQSgHAKVoFbIkBcNhVa3DGWhQyWoxuqgwGf81IsTyN5+0dC99sJIUCAD998mYMi8CTmxCcek7A47YgFrlyAAlxn3OrsIf/ED7jDWoWH5iIkUj0Iy7PCcnbopOQZjoX2DzZYBYkzsKzxK0xcV23IJRDLcdhfNTDTMcMhTeVWsBZe1f0zl7vx3BrJE3WqNvRmJ0LgBQCSO5HbnvBwTGZvo48/KtIggDMn0DRnewbfNL7jfRhiy4pPh6TC2M7Y74YCUj7A4fZFWf+Yuq6Vi4oH/4IF1MjYXeQCVgxLDaXlXv+e+Z1UqwRcJL6Uooydh1mdKIDw=
     api_key:
       secure: BxPzO6z768C2Sc6lijoRJNhMiL+HnUfcLWXB99WVQM++OaY+3t98EjabETvPfgCfl3gxyBrTnfn3umuj3dbFCSspptY+mnI/sjvvu3yfHMOPOGT+5yhPzBir+WA5GN4gAlAwvOoMYTUJf//An7b4Pa+98Tz52MJMtYvNPTtHmG8K4G6xhWRtkuIRp7jMrBJpp27RHBW03csBcX+wYwaPjTtRev4/VhnbQxquSq6EYWSXlxBPNt24y2zQJ5qcFs50XEz6FVzXp9S4rN9ngVbCHfdmwM/JxJCoeKgjDJErVb8VISNUHUHTin+4vtAU4ypheyWzxNcpGeCIECd7eNSwXFoCAZlmJIORDiWX3BlE7Hjxn+J3h0hw2EkOt6B/ReaY0fdg88xWZCGgUYiXTt4EQ7h0XugpQjTme/3w0efWufikwvgJi7EG1ITKTmTwvh8ps8IkU9WigIqcTacTLE051EIVhVsiUZJsuGgIdhQ3d3XCGS500GxNifrTxovOu2l0D3DKXoMbzt9quDHWSU28iJZsnAaYAKGt1M4rvahuC0KQ2d64Qcy4qIzoFc2O2FY9xqZGYAn0h0uPdzCgBj9FoHu3D/YEUDM7XTTws0hVT94/HpDcCiqd4zuE95cD0fHCjQfCWOBf9qMxbKWTAyHslMGtTwlIFL1IaAjLNpyI3SI=
